@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { InsurancePolicyComponent } from './modules/insurance-policy/insurance-policy.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InsurancePolicyComponent
   ],
   imports: [
     BrowserModule,
