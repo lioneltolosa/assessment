@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { InsurancePolicyComponent } from './insurance-policy.component';
 import { PoliciesComponent } from './components/policies/policies.component';
+
 @NgModule({
     imports: [
         CommonModule,
