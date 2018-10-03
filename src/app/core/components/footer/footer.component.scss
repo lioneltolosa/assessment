@@ -1,0 +1,75 @@
+@import '~styles/01_settings/variables';
+
+footer {
+    background: $white;
+    padding-top: 3em;
+
+    .content-list {
+        margin-bottom: 30px;
+
+        h6 {
+            color: $black;
+            padding-bottom: 1em;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $gray-600;
+            }
+        }
+    }
+
+    .footer-nav {
+        padding-left: 0;
+
+        li {
+            list-style: none;
+            margin-top: 8px;
+
+            a {
+                color: $gray-600;
+
+                &:hover {
+                    color: $gray-600;
+				}
+			}
+		}
+	}
+}
+
+.footer-bottom {
+    border-top: 1px solid $footer-bottom-color;
+    padding-bottom: 1em;
+    padding-top: 2em;
+
+    .footer-text {
+        color: $footer-text-color;
+
+	}
+}
+
+.footer-social {
+    a {
+        background: $footer-social-color;
+        display: inline-block;
+        line-height: 30px;
+        margin-right: 5px;
+        text-align: center;
+        width: 30px;
+
+        i {
+            color: $footer-text-color;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            background: $gray-600;
+
+            i {
+                color: $white;
+			}
+		}
+	}
+}
