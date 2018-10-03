@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PoliciesComponent } from './components/policies/policies.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { InsurancePolicyComponent } from './insurance-policy.component';
-
+import { PoliciesComponent } from './components/policies/policies.component';
 @NgModule({
     imports: [
-        CommonModule
+        CommonModule,
+        NgbModule.forRoot()
     ],
     declarations: [
         InsurancePolicyComponent,
         PoliciesComponent
     ],
     exports: [
-        InsurancePolicyComponent
+        InsurancePolicyComponent,
+        PoliciesComponent
     ]
 })
 export class InsurancePolicyModule { }
