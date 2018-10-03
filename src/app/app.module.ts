@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core';
+import { InsurancePolicyModule } from './modules/insurance-policy/insurance-policy.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CoreModule } from './core';
     ],
     imports: [
         BrowserModule,
-        CoreModule
+        CoreModule,
+        InsurancePolicyModule
     ],
     providers: [],
     bootstrap: [
