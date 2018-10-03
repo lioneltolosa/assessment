@@ -4,6 +4,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
     imports: [
@@ -12,11 +13,13 @@ import { FooterComponent } from './components/footer/footer.component';
     ],
     declarations: [
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        CarouselComponent
     ],
     exports: [
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        CarouselComponent
     ]
 })
 
