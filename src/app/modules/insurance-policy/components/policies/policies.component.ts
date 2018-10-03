@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Config, PoliciesService } from './policies.service';
+import { PoliciesService } from './policies.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-policies',
@@ -9,18 +10,14 @@ import { Config, PoliciesService } from './policies.service';
 })
 export class PoliciesComponent implements OnInit {
 
-    config: Config;
+    characters: Observable<any[]>;
+    columns: string[];
 
     constructor(private configService: PoliciesService) { }
 
-    showConfig() {
-        this.configService.getConfig()
-          .subscribe((data: Config) => this.config = {
-            policiesUrl: data['policiesUrl']
-          });
-      }
-
     ngOnInit() {
-    }
+        this.columns = this.configService.getColumns();
 
+        this.characters = this.configService.getCharacters();
+    }
 }

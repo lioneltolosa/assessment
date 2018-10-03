@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/delay';
+
+import { POLICIES } from './mock-data';
 
 export interface Config {
     policiesUrl: string;
@@ -8,16 +12,15 @@ export interface Config {
 
 @Injectable()
 export class PoliciesService {
-    configUrl = '/src/assets/config.json';
 
     constructor(private http: HttpClient) { }
 
-    getConfig() {
-        return this.http.get<Config>(this.configUrl);
+    getCharacters(): Observable<any[]> {
+        return Observable.of(POLICIES);
     }
 
-    getConfigResponse(): Observable<HttpResponse<Config>> {
-        return this.http.get<Config>(
-          this.configUrl, { observe: 'response' });
-      }
+    getColumns(): string[] {
+        return ['id', 'amountInsured', 'email', 'inceptionDate', 'installmentPayment', 'clientId'];
+    }
+
 }

@@ -1,6 +1,18 @@
-<h3>Get configuration from JSON file</h3>
-<div>
-    <span *ngIf="config">
-        <p>API URL is "{{config.policiesUrl}}"</p>
-    </span>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{col}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let char of characters | async">
+                <td *ngFor="let col of columns">
+                {{char[col]}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
