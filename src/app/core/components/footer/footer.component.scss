@@ -1,4 +1,9 @@
 @import '~styles/01_settings/variables';
+@import '~styles/01_settings/mixins';
+@import '~bootstrap/scss/utilities/spacing';
+
+$footer-bottom-color: #D5D5D5;
+$footer-text-color: #777;
 
 footer {
     background: $gray-100;
@@ -49,6 +54,14 @@ footer {
                     }
                 }
             }
+        }
+
+        @include media-breakpoint-up(xs) {
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(lg) {
+            text-align: left;
         }
     }
 

@@ -1,16 +1,14 @@
-@import '~bootstrap/scss/utilities';
+@import '~styles/01_settings/variables';
 
 .view-header-tabs {
-    @extend .px-0;
-
-
     .header-tabs {
         .nav-tabs {
-            background-color: $white;
+            background-color: $gray-100;
             display: flex;
             justify-content: space-around !important;
 
             .nav-link {
+                color: $gray-600;
                 font-weight: 600;
                 padding: 1em 2em;
 
@@ -27,13 +25,7 @@
         }
 
         .tab-content {
-            background: $white;
             padding-top: 2em;
-
-            .tab-pane {
-                @include make-container;
-                @include make-container-max-widths;
-            }
         }
     }
 }
