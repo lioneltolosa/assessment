@@ -1,18 +1,18 @@
 <div class="container">
-    <table class="table table-striped table-responsive">
-        <thead>
-            <tr>
-                <th *ngFor="let col of columns">
-                    {{col}}
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let char of characters | async">
-                <td *ngFor="let col of columns">
-                {{char[col]}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="table-policies">
+        <div class="columns">
+            <span *ngFor="let col of columns"
+                    class="title-columns">
+                {{col}}
+            </span>
+        </div>
+        <div class="characters">
+            <span class="col-characters" *ngFor="let char of characters | async">
+                <span *ngFor="let col of columns"
+                       class="title-characters">
+                    {{char[col]}}
+                </span>
+            </span>
+        </div>
+    </div>
 </div>

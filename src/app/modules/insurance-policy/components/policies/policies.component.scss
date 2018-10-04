@@ -1,9 +1,29 @@
-.table {
-    tbody {
-        tr {
-            td {
-                text-align: center;
-            }
+@import '~styles/01_settings/variables';
+
+.table-policies {
+    border: 1px solid $gray-600;
+
+    .columns {
+        border: 1px solid $gray-600;
+
+        .title-columns {
+            font-size: 1.2em;
+            margin-left: 64px;
+            margin-right: 113px;
+        }
+    }
+
+    .characters {
+        text-align: justify;
+
+        .col-characters {
+            display: flex;
+            justify-content: center;
+        }
+
+        .title-characters {
+            margin: 13px 65px 21px;
+            margin-right: 83px;
         }
     }
 }

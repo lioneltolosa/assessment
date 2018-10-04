@@ -20,7 +20,7 @@ export class PoliciesService {
     }
 
     getColumns(): string[] {
-        return ['id', 'amountInsured', 'email', 'inceptionDate', 'installmentPayment', 'clientId'];
+        return ['amountInsured', 'email', 'inceptionDate', 'installmentPayment'];
     }
 
 }
