@@ -17,6 +17,30 @@ $content-header-color: rgba(0, 79, 174, .25);
         font-style: italic;
     }
 
+    .navbar {
+        background-color: $white;
+        padding: 0;
+
+        .nav-link {
+            color: $black;
+            font-style: italic;
+            margin-right: .5em;
+            text-align: right;
+
+            &:hover {
+                color: $gray-600;
+            }
+
+            .fa-angle-down {
+                &::before {
+                    margin-top: -.8em;
+                    opacity: .4;
+                    position: absolute;
+                }
+            }
+        }
+    }
+
     .nav {
         justify-content: center;
 
@@ -25,14 +49,6 @@ $content-header-color: rgba(0, 79, 174, .25);
                 color: $black;
                 font-family: 'Roboto', sans-serif;
                 font-size: .9em;
-
-                .fa-angle-down {
-                    &::before {
-                        margin-left: .1em;
-                        margin-top: -.7em;
-                        opacity: .4;
-                    }
-                }
 
                 .click {
                     font-size: .8em;
