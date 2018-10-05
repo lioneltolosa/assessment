@@ -1,18 +1,22 @@
-<div class="container">
-    <div class="table-policies">
-        <div class="columns">
-            <span *ngFor="let col of columns"
-                    class="title-columns">
-                {{col}}
-            </span>
-        </div>
-        <div class="characters">
-            <span class="col-characters" *ngFor="let char of characters | async">
-                <span *ngFor="let col of columns"
-                       class="title-characters">
-                    {{char[col]}}
-                </span>
-            </span>
-        </div>
-    </div>
+<div class="content-table">
+    <table>
+        <thead >
+            <tr>
+                <th *ngFor="let col of columns">
+                    {{col}}
+                    <div class="sort-icon">
+                        <i class="fas fa-caret-up"></i>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let char of characters | async">
+                <td *ngFor="let col of columns">
+                        {{char[col]}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
